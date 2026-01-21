@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
     
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -22,28 +22,32 @@ public class main {
                     break;
                     
                 case 1:
-                    System.out.print("\033[H\033[2J");
-                    System.out.flush();
                     System.out.println("=============Welcome To Stock Management System==============");
                     System.out.print("Enter The Password To continue: ");
                     int admin_password = sc.nextInt();
-                    if(admin_password == 12345){ 
-                        System.out.println("Login success...!"); 
-                        // Function Admin
+                    Admin admin= new Admin();
+                    if(admin.login(admin_password)){ 
+                        System.out.println("Login success...!");
+                        admin.run(sc); 
                     } else {
                         System.out.println("Wrong password! Login Fail....!");
                     }
                     break;
                     
                 case 2:
-                    System.out.print("\033[H\033[2J");
-                    System.out.flush();
-                    System.out.print("Enter User name and Id To continue: ");
+                    System.out.print(" Please Enter Id : ");
                     int staff_id = sc.nextInt();
-                    if(staff_id == 123){
-                        System.out.println("done..!"); 
-                        // Function staff
+                    sc.nextLine();
+                    System.out.print("Please Enter The username:");
+                    String Staff_username=sc.nextLine();
+                    Staff staff = new Staff(123, "John");
+                    if(staff.Login(staff_id, Staff_username)){
+                        System.out.println("Login success...!");
+                        staff.Run(sc);
+                    }else{
+                        System.out.println("Invalide password or username Please Enter again.");
                     }
+
                     break;
                     
                 case 3:
