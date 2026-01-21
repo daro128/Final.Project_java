@@ -1,5 +1,6 @@
+package data1;
 public class insertData{
-    makeItem[] item = new makeItem[10];
+    public makeItem[] item = new makeItem[10];
     public insertData() {
         item[0] = new makeItem(1, "Apple", 50, 0.5, 1.0);
         item[1] = new makeItem(2, "Banana", 40, 0.3, 0.8);

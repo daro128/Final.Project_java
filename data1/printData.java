@@ -1,3 +1,4 @@
+package data1;
 public class printData{
     public static void main(String[] args){
         insertData data = new insertData();

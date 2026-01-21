@@ -1,11 +1,13 @@
-public class makeItem{
-    int id;
-    String name;
-    int quantity;
-    double buy;
-    double sell;
-    double profit; 
-    double totalProfit;
+package data1;
+
+public class makeItem {
+    public int id;
+    public String name;
+    public int quantity;
+    public double buy;
+    public double sell;
+    public double profit; 
+    public double totalProfit;
 
     public makeItem(int id,String name,int quantity,double buy,double sell){
         this.id = id;
@@ -16,6 +18,4 @@ public class makeItem{
         this.profit = sell - buy; 
         this.totalProfit = profit * quantity;
     }
-
-
 }
